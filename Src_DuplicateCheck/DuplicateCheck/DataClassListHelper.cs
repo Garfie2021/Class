@@ -6,9 +6,12 @@ namespace DuplicateCheck
     public static class DataClassListHelper
     {
         /// <summary>
-        /// データクラスのリストに、重複しているId/Codeがあるかチェックする
+        /// データクラスのListに重複しているIdがあるかチェックする。
         /// </summary>
-        /// <returns>true;重複無し　false;重複有り</returns>
+        /// <returns>
+        /// true;重複無し
+        /// false;重複有り
+        /// </returns>
         public static bool IsDuplicateId_Ptn1(List<DataClass> dataList)
         {
             if (dataList.Where(x1 => x1.Id != 0)
@@ -21,12 +24,14 @@ namespace DuplicateCheck
         }
 
         /// <summary>
-        /// データクラスのリストに、重複しているIdがあるかチェックする
+        /// データクラスのListに重複しているIdがあるかチェックする
         /// </summary>
         /// <returns>
-        /// true;重複無し
-        /// false;重複有り
-        /// 重複したIdのリスト。
+        /// Item1
+        ///   true;重複無し
+        ///   false;重複有り
+        /// Item2
+        ///   重複しているデータのList
         /// </returns>
         public static (bool, List<DataClass>?) IsDuplicateId_Ptn2(List<DataClass> dataList)
         {
@@ -36,19 +41,19 @@ namespace DuplicateCheck
                 .Where(x4 => x4.Count() > 1)
                 .Select(x5 => x5.Key).ToList();
 
-
             if (duplicateListId.Count() > 0)
-            {
                 return (false, dataList.Where(x6 => duplicateListId.Select(Id => Id).Contains(x6.Id)).ToList());    //重複有り
-            }
 
             return (true, null) ;   //重複無し
         }
 
         /// <summary>
-        /// データクラスのリストに、重複しているId/Codeがあるかチェックする
+        /// データクラスのListに重複しているCodeがあるかチェックする。
         /// </summary>
-        /// <returns>true;重複無し　false;重複有り</returns>
+        /// <returns>
+        /// true;重複無し
+        /// false;重複有り
+        /// </returns>
         public static bool IsDuplicateCode_Ptn1(List<DataClass> dataList)
         {
             if (dataList.Where(x1 => !string.IsNullOrEmpty(x1.Code))
@@ -61,12 +66,14 @@ namespace DuplicateCheck
         }
 
         /// <summary>
-        /// データクラスのリストに、重複しているCodeがあるかチェックする
+        /// データクラスのListに重複しているCodeがあるかチェックする。
         /// </summary>
         /// <returns>
-        /// true;重複無し
-        /// false;重複有り
-        /// 重複したIdのリスト。
+        /// Item1
+        ///   true;重複無し
+        ///   false;重複有り
+        /// Item2
+        ///   重複しているデータのList
         /// </returns>
         public static (bool, List<DataClass>?) IsDuplicateCode_Ptn2(List<DataClass> dataList)
         {
