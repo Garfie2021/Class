@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuplicateCheck", "DuplicateCheck\DuplicateCheck.csproj", "{15540E0B-EB52-484E-B4A8-3FBCE509E27A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuplicateCheckTests", "DuplicateCheckTests\DuplicateCheckTests.csproj", "{6E96A6DA-1FFF-4F3C-837D-B5B30F2281EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15540E0B-EB52-484E-B4A8-3FBCE509E27A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15540E0B-EB52-484E-B4A8-3FBCE509E27A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15540E0B-EB52-484E-B4A8-3FBCE509E27A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15540E0B-EB52-484E-B4A8-3FBCE509E27A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E96A6DA-1FFF-4F3C-837D-B5B30F2281EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E96A6DA-1FFF-4F3C-837D-B5B30F2281EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E96A6DA-1FFF-4F3C-837D-B5B30F2281EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E96A6DA-1FFF-4F3C-837D-B5B30F2281EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {322278F6-D0F5-496A-BF6D-87B55C833C5B}
+	EndGlobalSection
+EndGlobal
